@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
@@ -10,14 +10,13 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to iffa.dev
-        </h1>
+        <h1 className={styles.title}>Welcome to iffa.dev</h1>
 
         <p className={styles.description}>
-          There's not much here yet, but do <a href="https://github.com/iffa/iffa.dev">come back later</a>!
+          There's not much here yet, but do{' '}
+          <a href="https://github.com/iffa/iffa.dev">come back later</a>!
         </p>
       </main>
     </div>
-  )
+  );
 }
