@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import React from 'react';
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +14,7 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to iffa.dev</h1>
 
         <p className={styles.description}>
-          There's not much here yet, but do{' '}
+          There&rsquo;s not much here yet, but do{' '}
           <a href="https://github.com/iffa/iffa.dev">come back later</a>!
         </p>
       </main>

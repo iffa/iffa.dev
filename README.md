@@ -19,7 +19,7 @@ Content coming soon, I promise.
 - **Next.js** as the framework
 - **TypeScript**, because type-safety is awesome and should be standard
 - **ESLint w/ Prettier**, it should make sense and look good
-- **Commitlint**, just to make sure commit messages are not spaghetti 
+- **Commitlint**, just to make sure commit messages are not spaghetti
 
 ## Running locally
 
