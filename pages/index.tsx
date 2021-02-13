@@ -1,6 +1,6 @@
-import { Heading } from '@chakra-ui/react';
+import Header from '@/components/Header';
 import React from 'react';
 
 export default function Home(): JSX.Element {
-  return <Heading>iffa.dev</Heading>;
+  return <Header />;
 }
