@@ -6,14 +6,16 @@ import {
   Heading,
   IconButton,
   useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
 
 export default function Header(): JSX.Element {
   const { colorMode, toggleColorMode } = useColorMode();
+  const backgroundColor = useColorModeValue('gray.200', 'gray.900');
 
   return (
-    <Box width="100%" py={4}>
+    <Box width="100%" py={4} backgroundColor={backgroundColor}>
       <Container maxWidth={'container.xl'}>
         <Flex justifyContent="space-between" alignItems="center">
           <Heading>iffa.dev</Heading>
