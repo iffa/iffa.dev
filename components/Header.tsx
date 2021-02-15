@@ -18,7 +18,9 @@ export default function Header(): JSX.Element {
     <Box width="100%" py={4} backgroundColor={backgroundColor}>
       <Container maxWidth={'container.xl'}>
         <Flex justifyContent="space-between" alignItems="center">
-          <Heading>iffa.dev</Heading>
+          <Heading bgGradient="linear(to-l, #3F5EFB,#FC466B)" bgClip="text">
+            iffa.dev
+          </Heading>
           <IconButton
             aria-label="Toggle color mode"
             title="Toggle color mode"
