@@ -12,7 +12,7 @@ import React from 'react';
 
 export default function Header(): JSX.Element {
   const { colorMode, toggleColorMode } = useColorMode();
-  const backgroundColor = useColorModeValue('gray.200', 'gray.900');
+  const backgroundColor = useColorModeValue('white', 'gray.900');
 
   return (
     <Box width="100%" py={4} backgroundColor={backgroundColor}>
@@ -20,7 +20,8 @@ export default function Header(): JSX.Element {
         <Flex justifyContent="space-between" alignItems="center">
           <Heading>iffa.dev</Heading>
           <IconButton
-            aria-label="Dark mode"
+            aria-label="Toggle color mode"
+            title="Toggle color mode"
             icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             onClick={toggleColorMode}
           />
