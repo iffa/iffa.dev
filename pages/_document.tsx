@@ -22,6 +22,13 @@ class AppDocument extends Document {
           <ColorModeScript initialColorMode={'dark'} />
           <Main />
           <NextScript />
+
+          {/* Cloudflare Web Analytics */}
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.ANALYTICS_TOKEN}"}`}
+          />
         </body>
       </Html>
     );
