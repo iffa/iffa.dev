@@ -1,23 +1,17 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Header from '@/components/Header';
+import { Box, Container, Heading, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 
 export default function Home(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>iffa.dev</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Box>
+      <Header />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to iffa.dev</h1>
-
-        <p className={styles.description}>
-          There&rsquo;s not much here yet, but do{' '}
-          <a href="https://github.com/iffa/iffa.dev">come back later</a>!
-        </p>
-      </main>
-    </div>
+      <Container maxWidth={'container.xl'} py={4}>
+        <Heading size="lg">Hi, my name is Santeri!</Heading>
+        <Text>I&rsquo;m a full stack engineer currently working at CGI.</Text>
+        <Text>This site is still in development, check back later!</Text>
+      </Container>
+    </Box>
   );
 }
