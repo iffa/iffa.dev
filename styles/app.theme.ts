@@ -1,8 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-
-function mode(lightMode, darkMode) {
-  return (props) => (props.colorMode === 'dark' ? darkMode : lightMode);
-}
+import { mode } from '@chakra-ui/theme-tools';
 
 /**
  * TODO: Layout flashing could be eliminated but I don't like the proposed solution:
@@ -14,15 +11,22 @@ export const AppTheme = extendTheme({
     body: 'Montserrat, sans-serif',
     mono: 'Inconsolata, monospace',
   },
-  global: (props) => ({
-    color: mode('gray.800', 'whiteAlpha.900')(props),
-    bg: mode('white', 'gray.800')(props),
-    '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.400')(props),
-    },
-    '*, *::before, &::after': {
-      borderColor: mode('gray.200', 'whiteAlpha.300')(props),
-      wordWrap: 'break-word',
-    },
-  }),
+  styles: {
+    global: (props) => ({
+      body: {
+        fontFamily: 'body',
+        color: mode('gray.800', 'whiteAlpha.900')(props),
+        bg: mode('gray.200', 'gray.800')(props),
+        transition: 'background-color 0.2s',
+        lineHeight: 'base',
+      },
+      '*::placeholder': {
+        color: mode('gray.400', 'whiteAlpha.400')(props),
+      },
+      '*, *::before, &::after': {
+        borderColor: mode('gray.200', 'whiteAlpha.300')(props),
+        wordWrap: 'break-word',
+      },
+    }),
+  },
 });
