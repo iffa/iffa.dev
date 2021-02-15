@@ -10,7 +10,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import React from 'react';
 
 export default function Header(): JSX.Element {
@@ -30,6 +30,20 @@ export default function Header(): JSX.Element {
           </Heading>
 
           <ButtonGroup size="md">
+            <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL} isExternal>
+              <IconButton
+                aria-label="Navigate to LinkedIn"
+                title="Navigate to LinkedIn"
+                icon={<FaLinkedinIn />}
+              />
+            </Link>
+            <Link href={process.env.NEXT_PUBLIC_TWITTER_URL} isExternal>
+              <IconButton
+                aria-label="Navigate to Twitter"
+                title="Navigate to Twitter"
+                icon={<FaTwitter />}
+              />
+            </Link>
             <Link href={process.env.NEXT_PUBLIC_GITHUB_URL} isExternal>
               <IconButton
                 aria-label="Navigate to GitHub"
