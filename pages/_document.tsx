@@ -7,6 +7,19 @@ class AppDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link
+            rel="icon"
+            type="image/png"
+            href="favicon-32x32.png"
+            sizes="32x32"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="favicon-16x16.png"
+            sizes="16x16"
+          />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap"
