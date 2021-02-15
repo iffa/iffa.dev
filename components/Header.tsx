@@ -10,7 +10,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import React from 'react';
 
 export default function Header(): JSX.Element {
@@ -18,7 +18,7 @@ export default function Header(): JSX.Element {
   const backgroundColor = useColorModeValue('white', 'gray.900');
 
   return (
-    <Box width="100%" py={4} backgroundColor={backgroundColor}>
+    <Box width="100%" py={4} backgroundColor={backgroundColor} as="header">
       <Container maxWidth={'container.xl'}>
         <Flex
           direction="row"
