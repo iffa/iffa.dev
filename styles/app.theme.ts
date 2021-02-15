@@ -4,6 +4,10 @@ function mode(lightMode, darkMode) {
   return (props) => (props.colorMode === 'dark' ? darkMode : lightMode);
 }
 
+/**
+ * TODO: Layout flashing could be eliminated but I don't like the proposed solution:
+ * https://chakra-ui.com/docs/features/color-mode#add-colormodemanager-optional
+ */
 export const AppTheme = extendTheme({
   fonts: {
     heading: 'Inconsolata, monospace',
