@@ -12,11 +12,14 @@ has a great video on the topic, which you can find [here](https://youtu.be/rtgba
 
 ## Overview
 
+See the site in action at [https://iffa.dev](https://iffa.dev)!
+
 Content coming soon, I promise.
 
 ### Built using
 
 - **Next.js** as the framework
+- **Chakra UI** for components and styling
 - **TypeScript**, because type-safety is awesome and should be standard
 - **ESLint w/ Prettier**, it should make sense and look good
 - **Commitlint**, just to make sure commit messages are not spaghetti

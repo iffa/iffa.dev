@@ -1,5 +1,6 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
+  Avatar,
   Box,
   BoxProps,
   ButtonGroup,
@@ -7,6 +8,7 @@ import {
   Flex,
   forwardRef,
   Heading,
+  HStack,
   IconButton,
   Link,
   useColorMode,
@@ -34,32 +36,20 @@ export const Header = forwardRef<BoxProps, 'header'>((props, ref) => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Heading bgGradient="linear(to-l, #3F5EFB,#FC466B)" bgClip="text">
-            iffa.dev
-          </Heading>
+          <HStack spacing={4} align="center">
+            <Avatar
+              loading="eager"
+              aria-label="Avatar"
+              title="Avatar"
+              size="md"
+              src={`https://www.gravatar.com/avatar/${process.env.NEXT_PUBLIC_GRAVATAR_HASH}?s=256`}
+            />
+            <Heading bgGradient="linear(to-l, #3F5EFB,#FC466B)" bgClip="text">
+              iffa.dev
+            </Heading>
+          </HStack>
 
           <ButtonGroup size="md">
-            <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL} isExternal>
-              <IconButton
-                aria-label="Navigate to LinkedIn"
-                title="Navigate to LinkedIn"
-                icon={<FaLinkedinIn />}
-              />
-            </Link>
-            <Link href={process.env.NEXT_PUBLIC_TWITTER_URL} isExternal>
-              <IconButton
-                aria-label="Navigate to Twitter"
-                title="Navigate to Twitter"
-                icon={<FaTwitter />}
-              />
-            </Link>
-            <Link href={process.env.NEXT_PUBLIC_GITHUB_URL} isExternal>
-              <IconButton
-                aria-label="Navigate to GitHub"
-                title="Navigate to GitHub"
-                icon={<FaGithub />}
-              />
-            </Link>
             <IconButton
               aria-label="Toggle color mode"
               title="Toggle color mode"

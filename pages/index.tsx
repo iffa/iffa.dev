@@ -5,9 +5,11 @@ import React from 'react';
 export default function Home(): JSX.Element {
   return (
     <ContentContainer>
-      <Heading size="lg">Hi, my name is Santeri!</Heading>
-      <Text>I&rsquo;m a full stack engineer currently working at CGI.</Text>
-      <Text>This site is still in development, check back later!</Text>
+      <Heading size="xl">Hi, my name is Santeri! 👋</Heading>
+      <Text fontSize="lg">
+        I&rsquo;m a full stack developer, electronic music enthusiast and
+        motorsport fanatic.
+      </Text>
     </ContentContainer>
   );
 }

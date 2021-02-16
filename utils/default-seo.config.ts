@@ -3,7 +3,7 @@ import { DefaultSeoProps } from 'next-seo';
 export const defaultSeo: DefaultSeoProps = {
   title: 'Santeri Elo – Software developer',
   description:
-    'Full stack developer and electronic music enthusiast from Finland.',
+    'Full stack developer, electronic music enthusiast and motorsport fanatic from Finland.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
