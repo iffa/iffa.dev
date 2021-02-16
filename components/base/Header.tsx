@@ -24,6 +24,7 @@ export const Header = forwardRef<BoxProps, 'header'>((props, ref) => {
       width="100%"
       py={4}
       backgroundColor={backgroundColor}
+      boxShadow="sm"
       ref={ref}
       {...props}
     >
