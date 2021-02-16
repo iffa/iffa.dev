@@ -19,7 +19,7 @@ export default function Header(): JSX.Element {
 
   return (
     <Box width="100%" py={4} backgroundColor={backgroundColor} as="header">
-      <Container maxWidth={'container.xl'}>
+      <Container maxWidth={'container.lg'}>
         <Flex
           direction="row"
           justifyContent="space-between"

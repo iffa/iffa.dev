@@ -111,6 +111,21 @@ export const AppTheme = extendTheme({
     body: 'Montserrat, sans-serif',
     mono: 'Inconsolata, monospace',
   },
+  fontWeights: {
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+  },
+  lineHeights: {
+    normal: 'normal',
+    none: '1',
+    shorter: '1.25',
+    short: '1.375',
+    base: '1.5',
+    tall: '1.625',
+    taller: '2',
+  },
   styles: {
     global: (props) => ({
       body: {
