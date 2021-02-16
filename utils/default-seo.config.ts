@@ -4,6 +4,7 @@ export const defaultSeo: DefaultSeoProps = {
   title: 'Santeri Elo – Software developer',
   description:
     'Full stack developer, electronic music enthusiast and motorsport fanatic from Finland. Creating memorable software experiences since 2011.',
+  canonical: 'https://iffa.dev/',
   openGraph: {
     type: 'website',
     title: 'Santeri Elo – Software developer',
@@ -32,4 +33,10 @@ export const defaultSeo: DefaultSeoProps = {
     site: '@iffa_dev',
     cardType: 'summary_large_image',
   },
+  additionalMetaTags: [
+    {
+      name: 'author',
+      content: 'Santeri Elo',
+    },
+  ],
 };
