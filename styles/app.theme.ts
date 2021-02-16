@@ -120,11 +120,21 @@ export const AppTheme = extendTheme({
   lineHeights: {
     normal: 'normal',
     none: '1',
-    shorter: '1.25',
-    short: '1.375',
-    base: '1.5',
-    tall: '1.625',
-    taller: '2',
+    shorter: '1.375',
+    short: '1.5',
+    base: '1.625',
+    tall: '2',
+    taller: '2.25',
+  },
+  components: {
+    Divider: {
+      baseStyle: (props) => ({
+        // divider inherits border color from default globals by default
+        // override this behavior because the default light mode value of
+        // gray.200 is invisible for us
+        borderColor: mode('gray.400', 'whiteAlpha.300')(props),
+      }),
+    },
   },
   styles: {
     global: (props) => ({

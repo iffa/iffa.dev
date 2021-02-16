@@ -1,9 +1,11 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
   Box,
+  BoxProps,
   ButtonGroup,
   Container,
   Flex,
+  forwardRef,
   Heading,
   IconButton,
   Link,
@@ -13,12 +15,18 @@ import {
 import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import React from 'react';
 
-export default function Header(): JSX.Element {
+export const Header = forwardRef<BoxProps, 'header'>((props, ref) => {
   const { colorMode, toggleColorMode } = useColorMode();
   const backgroundColor = useColorModeValue('white', 'gray.900');
 
   return (
-    <Box width="100%" py={4} backgroundColor={backgroundColor} as="header">
+    <Box
+      width="100%"
+      py={4}
+      backgroundColor={backgroundColor}
+      ref={ref}
+      {...props}
+    >
       <Container maxWidth={'container.lg'}>
         <Flex
           direction="row"
@@ -62,4 +70,4 @@ export default function Header(): JSX.Element {
       </Container>
     </Box>
   );
-}
+});

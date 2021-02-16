@@ -1,4 +1,4 @@
-import ContentContainer from '@/components/ContentContainer';
+import { ContentContainer } from '@/components/base/ContentContainer';
 import { Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 
