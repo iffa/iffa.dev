@@ -4,14 +4,13 @@ import {
   Flex,
   Heading,
   Icon,
-  Link,
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import React from 'react';
 import * as CSS from 'csstype';
-import { AiOutlineDownCircle } from 'react-icons/ai';
-import { motion } from 'framer-motion';
+import { BsChevronDoubleDown } from 'react-icons/bs';
+import { MotionBox } from '@/components/MotionBox';
 
 export default function LayoutTest(): JSX.Element {
   const headingSize = useBreakpointValue({
@@ -42,39 +41,51 @@ export default function LayoutTest(): JSX.Element {
             direction="column"
             height="100%"
           >
-            <Heading
+            <Text
               as="h1"
-              size={headingSize}
-              bgGradient="linear(to-t, #3F5EFB,#FC466B)"
-              bgClip="text"
+              fontSize="8xl"
+              fontWeight="bold"
               style={{
                 writingMode: headingWritingMode,
                 textOrientation: 'upright',
               }}
               zIndex="overlay"
-              isTruncated
+              overflowWrap="break-word"
+              textAlign="center"
             >
-              santeri
-            </Heading>
-            <Box mt={8}>
-              <motion.div
-                animate={{ y: 32 }}
-                transition={{
-                  type: 'spring',
-                  bounce: 0.5,
-                  duration: 1.0,
-                  repeatType: 'reverse',
-                  repeat: Infinity,
-                  repeatDelay: 0,
-                }}
+              Hi, my name is{' '}
+              <Text
+                as="span"
+                bgGradient="linear(to-t, #3F5EFB,#FC466B)"
+                bgClip="text"
               >
-                <Icon
-                  as={AiOutlineDownCircle}
-                  boxSize={12}
-                  color={'blackAlpha.800'}
-                />
-              </motion.div>
-            </Box>
+                Santeri
+              </Text>
+              .
+            </Text>
+            <MotionBox
+              mt={4}
+              direction="column"
+              alignItems="center"
+              animate={{ y: 32 }}
+              transition={{
+                type: 'spring',
+                bounce: 0.5,
+                duration: 1.0,
+                repeatType: 'reverse',
+                repeat: Infinity,
+                repeatDelay: 0,
+              }}
+            >
+              <Text fontSize="sm" textColor="blackAlpha.700">
+                Scroll down
+              </Text>
+              <Icon
+                as={BsChevronDoubleDown}
+                boxSize={8}
+                color={'blackAlpha.600'}
+              />
+            </MotionBox>
           </Flex>
         </Container>
       </Box>
