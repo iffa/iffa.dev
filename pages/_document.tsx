@@ -33,7 +33,6 @@ class AppDocument extends Document {
           />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={'dark'} />
           <Main />
           <NextScript />
 
