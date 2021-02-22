@@ -3,103 +3,25 @@ import {
   Container,
   Flex,
   Heading,
+  Icon,
+  Link,
   Text,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { ISourceOptions } from 'tsparticles';
-
-const particleConfig: ISourceOptions = {
-  fpsLimit: 30,
-  pauseOnBlur: true,
-  pauseOnOutsideViewport: true,
-  detectRetina: true,
-  backgroundMode: {
-    enable: true,
-  },
-  motion: {
-    disable: true,
-  },
-  particles: {
-    reduceDuplicates: true,
-    collisions: {
-      enable: true,
-    },
-    links: {
-      enable: true,
-      consent: true,
-      warp: true,
-      color: {
-        value: 'random',
-      },
-      opacity: 0.75,
-    },
-    move: {
-      enable: true,
-      direction: 'none',
-      outMode: 'bounce',
-      random: true,
-      speed: 1,
-    },
-    number: {
-      limit: 100,
-      value: 100,
-    },
-    opacity: {
-      value: 0.5,
-      random: {
-        enable: true,
-        minimumValue: 0.1,
-      },
-    },
-    size: {
-      value: 16,
-      random: {
-        enable: true,
-        minimumValue: 8,
-      },
-    },
-    shape: {
-      type: 'images',
-      images: [
-        {
-          src: '/icons/angular.png',
-          width: 128,
-          height: 128,
-        },
-        {
-          src: '/icons/android.png',
-          width: 128,
-          height: 128,
-        },
-        {
-          src: '/icons/javascript.png',
-          width: 128,
-          height: 128,
-        },
-        {
-          src: '/icons/react.png',
-          width: 128,
-          height: 128,
-        },
-        {
-          src: '/icons/kotlin.png',
-          width: 128,
-          height: 128,
-        },
-        {
-          src: '/icons/node.png',
-          width: 128,
-          height: 128,
-        },
-      ],
-    },
-  },
-};
+import * as CSS from 'csstype';
+import { AiOutlineDownCircle } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 
 export default function LayoutTest(): JSX.Element {
-  const headingSize = useBreakpointValue({ base: 'header', lg: 'header-xl' });
+  const headingSize = useBreakpointValue({
+    base: 'header-xl',
+    lg: 'header-xl',
+  });
+  const headingWritingMode: CSS.Property.WritingMode = useBreakpointValue({
+    base: 'horizontal-tb',
+    lg: 'horizontal-tb',
+  });
   const numbers = [1, 2];
   const colors = ['red.400', 'blue.400'];
   return (
@@ -114,14 +36,19 @@ export default function LayoutTest(): JSX.Element {
         height={{ base: '100vh', lg: '100%' }}
       >
         <Container maxWidth="container.xl" height="100%">
-          <Flex alignItems="center" justifyContent="center" height="100%">
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            direction="column"
+            height="100%"
+          >
             <Heading
               as="h1"
               size={headingSize}
               bgGradient="linear(to-t, #3F5EFB,#FC466B)"
               bgClip="text"
               style={{
-                writingMode: 'vertical-rl',
+                writingMode: headingWritingMode,
                 textOrientation: 'upright',
               }}
               zIndex="overlay"
@@ -129,9 +56,27 @@ export default function LayoutTest(): JSX.Element {
             >
               santeri
             </Heading>
+            <Box mt={8}>
+              <motion.div
+                animate={{ y: 32 }}
+                transition={{
+                  type: 'spring',
+                  bounce: 0.5,
+                  duration: 1.0,
+                  repeatType: 'reverse',
+                  repeat: Infinity,
+                  repeatDelay: 0,
+                }}
+              >
+                <Icon
+                  as={AiOutlineDownCircle}
+                  boxSize={12}
+                  color={'blackAlpha.800'}
+                />
+              </motion.div>
+            </Box>
           </Flex>
         </Container>
-        <Particles options={particleConfig} />
       </Box>
       <Box as="main" flexBasis={{ base: 'auto', lg: '50%' }}>
         {numbers.map((x, index) => {
