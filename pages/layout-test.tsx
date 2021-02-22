@@ -1,39 +1,14 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Icon,
-  Text,
-  useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
-import * as CSS from 'csstype';
 import { BsChevronDoubleDown } from 'react-icons/bs';
 import { MotionBox } from '@/components/MotionBox';
 
 export default function LayoutTest(): JSX.Element {
-  const headingSize = useBreakpointValue({
-    base: 'header-xl',
-    lg: 'header-xl',
-  });
-  const headingWritingMode: CSS.Property.WritingMode = useBreakpointValue({
-    base: 'horizontal-tb',
-    lg: 'horizontal-tb',
-  });
   const numbers = [1, 2];
   const colors = ['red.400', 'blue.400'];
   return (
-    <Flex flexDirection={{ base: 'column', lg: 'row-reverse' }}>
-      <Box
-        as="header"
-        flexBasis={{ base: 'auto', lg: '50%' }}
-        position={{ base: 'relative', lg: 'fixed' }}
-        top="0"
-        left="0"
-        width={{ base: '100%', lg: '50%' }}
-        height={{ base: '100vh', lg: '100%' }}
-      >
+    <Flex flexDirection="column">
+      <Box as="header" width="100%" height="100vh">
         <Container maxWidth="container.xl" height="100%">
           <Flex
             alignItems="center"
@@ -45,10 +20,6 @@ export default function LayoutTest(): JSX.Element {
               as="h1"
               fontSize="8xl"
               fontWeight="bold"
-              style={{
-                writingMode: headingWritingMode,
-                textOrientation: 'upright',
-              }}
               zIndex="overlay"
               overflowWrap="break-word"
               textAlign="center"
@@ -89,7 +60,7 @@ export default function LayoutTest(): JSX.Element {
           </Flex>
         </Container>
       </Box>
-      <Box as="main" flexBasis={{ base: 'auto', lg: '50%' }}>
+      <Box as="main">
         {numbers.map((x, index) => {
           return (
             <Flex
