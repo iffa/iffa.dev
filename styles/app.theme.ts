@@ -107,9 +107,8 @@ const colors: Partial<DefaultChakraTheme['colors']> = {
 export const AppTheme = extendTheme({
   colors,
   fonts: {
-    heading: 'Inconsolata, monospace',
+    heading: 'Montserrat, sans-serif',
     body: 'Montserrat, sans-serif',
-    mono: 'Inconsolata, monospace',
   },
   fontWeights: {
     normal: 400,
@@ -135,13 +134,25 @@ export const AppTheme = extendTheme({
         borderColor: mode('gray.400', 'whiteAlpha.300')(props),
       }),
     },
+    Heading: {
+      sizes: {
+        header: {
+          fontSize: ['6xl', null, '7xl'],
+          lineHeight: 1,
+        },
+        'header-xl': {
+          fontSize: ['8xl', null, '8xl'],
+          lineHeight: 1,
+        },
+      },
+    },
   },
   styles: {
     global: (props) => ({
       body: {
         fontFamily: 'body',
         color: mode('gray.800', 'whiteAlpha.900')(props),
-        bg: mode('gray.200', 'gray.800')(props),
+        bg: mode('white', 'gray.800')(props),
         transition: 'background-color 0.2s',
         lineHeight: 'base',
       },
