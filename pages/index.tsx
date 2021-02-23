@@ -1,6 +1,6 @@
 import { ContentWrapper } from '@/components/base/ContentWrapper';
 import { Hero } from '@/components/base/Hero';
-import { MotionBox } from '@/components/base/MotionBox';
+import { MotionBox, MotionText } from '@/components/base/MotionBox';
 import { StickyHero } from '@/components/base/StickyHero';
 import { FooterHero } from '@/components/heroes/FooterHero';
 import { Box, Flex, Heading, Icon, Text } from '@chakra-ui/react';
@@ -23,13 +23,22 @@ export default function Home(): JSX.Element {
             textAlign="center"
           >
             Hi, my name is{' '}
-            <Text
-              as="span"
+            <MotionText
               bgGradient="linear(to-t, #3F5EFB,#FC466B)"
               bgClip="text"
+              bgSize="150% 150%"
+              animate={{
+                backgroundPosition: ['0%, 0%', '97% 0%', '4% 100%', '97% 0%'],
+              }}
+              transition={{
+                duration: 5.0,
+                repeatType: 'mirror',
+                repeat: Infinity,
+                repeatDelay: 0,
+              }}
             >
               Santeri
-            </Text>
+            </MotionText>
             .
           </Text>
           <MotionBox
