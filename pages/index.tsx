@@ -27,12 +27,15 @@ export default function Home(): JSX.Element {
               bgGradient="linear(to-t, #3F5EFB,#FC466B)"
               bgClip="text"
               bgSize="150% 150%"
+              initial={{
+                backgroundPosition: '0% 0%',
+              }}
               animate={{
-                backgroundPosition: ['0%, 0%', '97% 0%', '4% 100%', '97% 0%'],
+                backgroundPosition: '125% 50%',
               }}
               transition={{
-                duration: 5.0,
-                repeatType: 'mirror',
+                duration: 1,
+                repeatType: 'reverse',
                 repeat: Infinity,
                 repeatDelay: 0,
               }}
