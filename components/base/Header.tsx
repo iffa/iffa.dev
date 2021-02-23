@@ -10,11 +10,9 @@ import {
   Heading,
   HStack,
   IconButton,
-  Link,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import React from 'react';
 
 export const Header = forwardRef<BoxProps, 'header'>((props, ref) => {

@@ -8,7 +8,6 @@ import {
   forwardRef,
   IconButton,
   Link,
-  Stack,
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
