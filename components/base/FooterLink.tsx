@@ -21,10 +21,18 @@ export const FooterLink = forwardRef<FooterLinkProps, 'a'>((props, ref) => {
   );
 
   return (
-    <motion.div initial={{ scale: 1.0 }} whileHover={{ scale: 1.2 }}>
+    <motion.div initial={{ scale: 1.0 }} whileHover={{ scale: 1.25 }}>
       <Link isExternal={true} ref={ref} {...chakraProps}>
         {icon ? (
-          <IconButton aria-label={iconLabel} title={iconLabel} icon={icon} />
+          <IconButton
+            variant="outline"
+            colorScheme="red"
+            size="lg"
+            fontSize="2xl"
+            aria-label={iconLabel}
+            title={iconLabel}
+            icon={icon}
+          />
         ) : (
           props.children
         )}

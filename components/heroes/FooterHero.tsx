@@ -11,7 +11,7 @@ export function FooterHero(): JSX.Element {
       <Heading as="h3" fontSize="4xl">
         This is the end.
       </Heading>
-      <SimpleGrid mt={4} spacing={4}>
+      <SimpleGrid mt={4} spacing={4} columns={2}>
         <FooterLink
           icon={<FaLinkedinIn />}
           iconLabel="Visit my LinkedIn profile"
@@ -30,7 +30,7 @@ export function FooterHero(): JSX.Element {
         <FooterLink
           icon={<AiFillMail />}
           iconLabel="Send me an email"
-          href={process.env.NEXT_PUBLIC_TWITTER_URL}
+          href={process.env.NEXT_PUBLIC_CONTACT_EMAIL}
         />
       </SimpleGrid>
     </StickyHero>
