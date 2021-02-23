@@ -1,7 +1,7 @@
+import { MotionBox } from '@/components/MotionBox';
 import { Box, Container, Flex, Heading, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
 import { BsChevronDoubleDown } from 'react-icons/bs';
-import { MotionBox } from '@/components/MotionBox';
 
 export default function LayoutTest(): JSX.Element {
   const numbers = [1, 2];
@@ -18,7 +18,7 @@ export default function LayoutTest(): JSX.Element {
           >
             <Text
               as="h1"
-              fontSize="8xl"
+              fontSize={{ base: '6xl', lg: '8xl' }}
               fontWeight="bold"
               zIndex="overlay"
               overflowWrap="break-word"
