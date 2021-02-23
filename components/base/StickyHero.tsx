@@ -11,6 +11,7 @@ export const StickyHero = forwardRef<FlexProps, 'div'>((props, ref) => {
       alignItems="center"
       justifyContent="center"
       boxShadow="inner"
+      backgroundColor="white"
       ref={ref}
       {...props}
     >

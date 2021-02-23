@@ -1,7 +1,8 @@
-import { ContentWrapper } from '@/components/ContentWrapper';
-import { Hero } from '@/components/Hero';
-import { MotionBox } from '@/components/MotionBox';
-import { StickyHero } from '@/components/StickyHero';
+import { ContentWrapper } from '@/components/base/ContentWrapper';
+import { Hero } from '@/components/base/Hero';
+import { MotionBox } from '@/components/base/MotionBox';
+import { StickyHero } from '@/components/base/StickyHero';
+import { FooterHero } from '@/components/heroes/FooterHero';
 import { Box, Flex, Heading, Icon, Text } from '@chakra-ui/react';
 import React from 'react';
 import { BsChevronDoubleDown } from 'react-icons/bs';
@@ -64,6 +65,7 @@ export default function Home(): JSX.Element {
               </StickyHero>
             );
           })}
+          <FooterHero />
         </Box>
       </Flex>
     </ContentWrapper>
